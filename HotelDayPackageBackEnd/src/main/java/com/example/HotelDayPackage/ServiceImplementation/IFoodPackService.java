@@ -1,4 +1,4 @@
-package com.example.HotelDayPackage.Service;
+package com.example.HotelDayPackage.ServiceImplementation;
 
 import com.example.HotelDayPackage.Entity.FoodPack;
 
