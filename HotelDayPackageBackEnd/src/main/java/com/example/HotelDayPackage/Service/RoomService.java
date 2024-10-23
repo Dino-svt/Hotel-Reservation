@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface RoomService {
     RoomDTO getRoomById(String roomId);
     RoomDTO bookRoom(String roomId, BookingDTO bookingDTO);
+    RoomDTO addRoom(RoomDTO roomDTO);
 }
