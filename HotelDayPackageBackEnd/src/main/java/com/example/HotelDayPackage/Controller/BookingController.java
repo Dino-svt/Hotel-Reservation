@@ -12,8 +12,15 @@ public class BookingController {
     @Autowired
     private BookingService bookingService;
 
-    @PostMapping
+    @PostMapping("/book")
     public BookingDTO createBooking(@RequestBody BookingDTO bookingDTO) {
         return bookingService.createBooking(bookingDTO);
     }
+
+    @DeleteMapping("/{bookingId}")
+    public void deleteBooking(@PathVariable Long bookingId) {
+        bookingService.deleteBooking(bookingId);
+    }
+
+
 }

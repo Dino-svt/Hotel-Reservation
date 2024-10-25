@@ -17,6 +17,6 @@ public class Room {
     private int roomNumber;
     private String roomFacilities;
     private String status; // "available", "booked"
-    private String bookingDate;
+    private String checkInDate;
     private String todayDate;
 }

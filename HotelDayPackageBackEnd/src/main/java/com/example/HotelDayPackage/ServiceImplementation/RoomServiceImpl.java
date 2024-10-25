@@ -25,7 +25,7 @@ public class RoomServiceImpl implements RoomService {
         Room room = roomRepository.findById(roomId)
                 .orElseThrow(() -> new ResourceNotFoundException("Room not found with id: " + roomId));
         return new RoomDTO(room.getRoomId(), room.getRoomType(), room.getRoomNumber(), room.getRoomFacilities(),
-                room.getStatus(), room.getBookingDate(), room.getTodayDate());
+                room.getStatus(), room.getCheckInDate(), room.getTodayDate());
     }
 
     @Transactional  // Ensures atomic transaction for room booking
@@ -42,12 +42,12 @@ public class RoomServiceImpl implements RoomService {
 
         // Update status to 'booked' and save booking date
         room.setStatus("booked");
-        room.setBookingDate(bookingDTO.getBookingDate());
+        room.setCheckInDate(bookingDTO.getCheckInDate());
         roomRepository.save(room);
 
         // Return updated room DTO
         return new RoomDTO(room.getRoomId(), room.getRoomType(), room.getRoomNumber(), room.getRoomFacilities(),
-                room.getStatus(), room.getBookingDate(), room.getTodayDate());
+                room.getStatus(), room.getCheckInDate(), room.getTodayDate());
     }
 
     @Override
@@ -58,7 +58,7 @@ public class RoomServiceImpl implements RoomService {
         room.setRoomNumber(roomDTO.getRoomNumber());
         room.setRoomFacilities(roomDTO.getRoomFacilities());
         room.setStatus("available");  // Default status as "available"
-        room.setBookingDate(null);    // Initially, no booking
+        room.setCheckInDate(null);    // Initially, no booking
         room.setTodayDate(roomDTO.getTodayDate());
 
         roomRepository.save(room);

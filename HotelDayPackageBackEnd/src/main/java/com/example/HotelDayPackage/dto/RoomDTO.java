@@ -13,6 +13,6 @@ public class RoomDTO {
     private int roomNumber;
     private String roomFacilities;
     private String status;
-    private String bookingDate;
+    private String checkInDate;
     private String todayDate;
 }

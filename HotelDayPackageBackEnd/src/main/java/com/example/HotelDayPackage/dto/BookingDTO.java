@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BookingDTO {
     private String roomId;
-    private String bookingDate;
     private String customerName;
+    private String customerNIC;
+    private String address;
+    private String checkInDate;
+    private String checkOutDate;
+    private String currentDate;
 }
