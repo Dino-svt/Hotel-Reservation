@@ -2,8 +2,8 @@ package com.example.HotelDayPackage.Service;
 
 import com.example.HotelDayPackage.Entity.FoodPack;
 import com.example.HotelDayPackage.Repository.FoodPackRepo;
-import com.example.HotelDayPackage.ServiceImplementation.FoodPackAlreadyExistsException;
-import com.example.HotelDayPackage.ServiceImplementation.FoodPackNotFoundException;
+import com.example.HotelDayPackage.Exception.FoodPackAlreadyExistsException;
+import com.example.HotelDayPackage.Exception.FoodPackNotFoundException;
 import com.example.HotelDayPackage.ServiceImplementation.IFoodPackService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -51,5 +51,10 @@ public class FoodPackService implements IFoodPackService {
         if(!foodPackRepo.existsById(day)){
             throw new FoodPackNotFoundException("Sorry, Food package not found.");
         }foodPackRepo.deleteById(day);
+    }
+
+    @Override
+    public FoodPack getFoodPackByDay(String day) {
+        return foodPackRepo.findByDay(day).orElseThrow(()-> new FoodPackNotFoundException("Sorry, no food pack found with that day :"+day));
     }
 }

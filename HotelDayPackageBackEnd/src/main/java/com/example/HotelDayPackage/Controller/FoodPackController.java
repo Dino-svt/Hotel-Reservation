@@ -34,5 +34,8 @@ public class FoodPackController {
         foodPackService.deleteFoodPackById(day);
     }
 
-
+    @GetMapping("/gfp/{day}")
+    public FoodPack getFoodPackByDay(@PathVariable String day){
+        return foodPackService.getFoodPackByDay(day);
+    }
 }
