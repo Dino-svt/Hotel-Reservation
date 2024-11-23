@@ -60,12 +60,14 @@ public class FoodPackServiceTest {
     @Test
     void updateFoodPackPositive() {
         when(foodPackRepo.findByDay("Monday")).thenReturn(Optional.of(foodPack));
+        when(foodPackRepo.save(any(FoodPack.class))).thenAnswer(invocation -> invocation.getArgument(0));
 
+        foodPack.setDay("Sunday");
         FoodPack updated = foodPackService.updateFoodPack(foodPack, "Monday");
 
         assertNotNull(updated);
-        assertEquals("Monday", updated.getDay());
-        verify(foodPackRepo, times(1)).save(foodPack);
+        assertEquals("Sunday", updated.getDay());
+        verify(foodPackRepo, times(1)).save(foodPack); 
     }
 
     @Test

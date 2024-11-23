@@ -9,8 +9,7 @@ import lombok.*;
 @Entity
 @Table(name = "FoodPackage")
 @AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@NoArgsConstructor 
 @Getter
 @Setter
 
