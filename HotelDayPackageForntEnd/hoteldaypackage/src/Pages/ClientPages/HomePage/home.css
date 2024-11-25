@@ -1,0 +1,50 @@
+.section-top{
+	width: 100%;
+	height: 590px;
+	background: url(C:\Users\newuser\Desktop\HotelGit\Hotel-Reservation\HotelDayPackageForntEnd\hoteldaypackage\src\Picture\1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	justify-content: center;
+
+}
+
+.cafe{
+	font-size: 10vw;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	line-height: 1;
+	text-shadow: 0 0 20px rgb(255, 255, 255);
+	Letter-spacing: 10px;
+	text-align: center;
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.582);
+	margin-top: 150px;
+	font-weight: bold;
+	
+}
+
+.bot07 , .bot08{
+	background-color: rgb(255, 255, 255);
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);            
+	font-size: 20px;
+	font-family: Garamond;
+	height: 60px;
+	width: 200px;
+	font-weight: bold;
+	border-radius: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	
+}
+
+.bot07 {
+	margin-left: -0%;
+}
+.bot08{
+	margin-left: 0%;
+}

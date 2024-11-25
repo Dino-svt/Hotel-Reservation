@@ -1,0 +1,79 @@
+.feedback-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.feedback-form, .search-bar, .feedback-list {
+  margin: 20px 0;
+}
+
+.feedback-form input, 
+.feedback-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 8px;
+}
+
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  color: gray;
+  transition: color 0.3s ease;
+}
+
+.star.selected {
+  color: #ffc107;
+}
+
+/* Default button styles */
+button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Specific styles for Submit and Search buttons */
+button[type="submit"] {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+
+button[type="submit"]:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+  border: 10px 15px;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+/* Update and delete button styles */
+.update-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}

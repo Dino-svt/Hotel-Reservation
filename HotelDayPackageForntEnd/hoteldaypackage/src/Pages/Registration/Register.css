@@ -1,0 +1,109 @@
+/* General styles for the admin register page */
+.admin-register {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2, h3 {
+    text-align: center;
+  }
+  
+  .user-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .user-form input,
+  .user-form select,
+  .user-form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .user-form input:focus,
+  .user-form select:focus,
+  .user-form button:focus {
+    outline: none;
+    border-color: #0066cc;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    font-size: 12px;
+    grid-column: span 2;
+  }
+  
+  /* Button styles */
+  button[type="submit"],
+  button[type="button"] {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="button"]:hover {
+    background-color:black;
+  }
+  
+  button[type="button"]:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  /* Styling for the user table */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .user-table th, .user-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .user-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Action buttons in the table */
+  button.edit-button {
+    background-color: blue; /* Blue for Edit */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.edit-button:hover {
+    background-color: blue;
+  }
+  
+  button.delete-button {
+    background-color: #f44336; /* Red for Delete */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.delete-button:hover {
+    background-color: #d32f2f;
+  }
+  

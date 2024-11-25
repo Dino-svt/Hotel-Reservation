@@ -1,0 +1,67 @@
+.admin-container {
+    padding: 20px;
+}
+
+.room-form input {
+    margin: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+.room-form button {
+    margin: 20px;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.room-form button:hover {
+    background-color: #45a049;
+}
+
+
+.room-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.room-table th, .room-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+
+.room-table button.edit-btn {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 5px; 
+}
+
+.room-table button.edit-btn:hover {
+    background-color: #0056b3; 
+}
+
+
+.room-table button.delete-btn {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.room-table button.delete-btn:hover {
+    background-color: #d32f2f; 
+}
+
+
+.delete-message {
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+}
