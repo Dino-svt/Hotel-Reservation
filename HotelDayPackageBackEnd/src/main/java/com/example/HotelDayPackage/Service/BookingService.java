@@ -1,13 +1,15 @@
 package com.example.HotelDayPackage.Service;
 
-import com.example.HotelDayPackage.dto.BookingDTO;
+import com.example.HotelDayPackage.Entity.Booking;
 
 import java.util.List;
 
 public interface BookingService {
-    BookingDTO createBooking(BookingDTO bookingDTO);
-    void deleteBooking(Long bookingId);
-    BookingDTO updateBooking(Long bookingId, BookingDTO bookingDTO);
-    BookingDTO viewBooking(Long bookingId);
-    List<BookingDTO> viewAllBookings();
+    Booking createBooking(Booking booking, Integer roomId);
+
+    void cancelBooking(Long bookingId);
+
+    List<Booking> getAllBookings();
+
+    Booking updateBooking(Long bookingId, Booking updatedBooking);
 }

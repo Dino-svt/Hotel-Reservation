@@ -1,26 +1,39 @@
 package com.example.HotelDayPackage.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Entity
 @Data
+@Table(name = "Booking")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Booking {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String roomId;
+
+    @Column(name = "customer_name", nullable = false)
     private String customerName;
-    private String customerNIC;
+
+    @Column(name = "address", nullable = false)
     private String address;
-    private String checkInDate;
-    private String checkOutDate;
-    private String currentDate;
+
+    @Column(name = "nic", nullable = false)
+    private String nic;
+
+    @Column(name = "booking_date", nullable = false)
+    private LocalDate bookingDate;
+
+    @Column(name = "created_date", nullable = false)
+    private LocalDate createdDate;
+
+    @ManyToOne
+    @JoinColumn(name = "room_id", nullable = false)
+    private RoomAvailability room;
 }
